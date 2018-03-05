@@ -1,1 +1,3 @@
-# flask_sqlalchemy_project_template
+
+# Flask SqlAlchemy Template
+

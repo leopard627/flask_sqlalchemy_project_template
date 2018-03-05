@@ -1,0 +1,5 @@
+{
+  "tests/test_views.py::BaseTestCase": true,
+  "tests/test_views.py::TestSimpleView": true,
+  "tests/test_views.py::TestSimpleView::test_smoke_test": true
+}
