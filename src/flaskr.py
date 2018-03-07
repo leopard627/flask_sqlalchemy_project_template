@@ -9,6 +9,8 @@ app = Flask(__name__)
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite://'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:MyNewPass@localhost/local_test'
 
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
 # 시크릿키를 입력하지 않으면 JWT 오류발생
 app.config['SECRET_KEY'] = 'super-secret'
 
