@@ -18,23 +18,23 @@ app.config['SECRET_KEY'] = 'super-secret'
 db = SQLAlchemy(app)
 # flask-migrate
 migrate = Migrate(app, db)
-# from src.models import User
+from src.models import User
 # import models
-
-class User(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(80), unique=True, nullable=False)
-    password = db.Column(db.String(500), nullable=False)
-    email = db.Column(db.String(120), unique=True, nullable=False)
-    # mobile = db.Column(db.String(120), unique=True, nullable=False)
-    address = db.Column(db.String(220), nullable=False)
-
-    # def __repr__(self):
-        # return '<User %r>' % self.username
-
-    def __str__(self):
-        return "User(id='%s')" % self.id
-
+#
+#class User(db.Model):
+#    id = db.Column(db.Integer, primary_key=True)
+#    username = db.Column(db.String(80), unique=True, nullable=False)
+#    password = db.Column(db.String(500), nullable=False)
+#    email = db.Column(db.String(120), unique=True, nullable=False)
+#    # mobile = db.Column(db.String(120), unique=True, nullable=False)
+#    address = db.Column(db.String(220), nullable=False)
+#
+#    # def __repr__(self):
+#        # return '<User %r>' % self.username
+#
+#    def __str__(self):
+#        return "User(id='%s')" % self.id
+#
 def authenticate(username, password):
     user = User.query.filter(
             User.username==username,
